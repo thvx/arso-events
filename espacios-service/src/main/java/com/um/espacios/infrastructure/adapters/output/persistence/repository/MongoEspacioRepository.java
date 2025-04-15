@@ -48,6 +48,11 @@ public class MongoEspacioRepository implements EspacioRepository {
     }
 
     @Override
+    public List<PuntoDeInteres> crearPuntosDeInteres(List<PuntoDeInteres> puntosDeInteres) {
+        return List.of();
+    }
+
+    @Override
     public List<EspacioFisico> buscarDisponibles(LocalDateTime inicio, LocalDateTime fin, int capacidadMinima) {
         return springDataEspacioRepository.findAll().stream()
                 .map(EspacioEntityMapper::toModel)
@@ -55,8 +60,4 @@ public class MongoEspacioRepository implements EspacioRepository {
                 .toList();
     }
 
-    @Override
-    public boolean tieneOcupacionesActivas(String id) {
-        return false;
-    }
 }

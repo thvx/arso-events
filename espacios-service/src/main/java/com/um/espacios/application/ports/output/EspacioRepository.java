@@ -13,7 +13,7 @@ public interface EspacioRepository {
     void actualizar(EspacioFisico espacio);
     Optional<EspacioFisico> buscarPorId(String id);
     List<EspacioFisico> buscarDisponibles(LocalDateTime inicio, LocalDateTime fin, int capacidadMinima);
-    boolean tieneOcupacionesActivas(String id);
     List<Ocupacion> ocupacionesActivas(String idEspacio);
     List<PuntoDeInteres> buscarPuntosDeInteresCercanos(double latitud, double longitud);
+    List<PuntoDeInteres> crearPuntosDeInteres(List<PuntoDeInteres> puntosDeInteres);
 }

@@ -21,8 +21,4 @@ public class Ocupacion {
     public boolean estaActiva() {
         return !cancelada && fechaFin.isAfter(LocalDateTime.now());
     }
-
-    public void cancelar() {
-        this.cancelada = true;
-    }
 }

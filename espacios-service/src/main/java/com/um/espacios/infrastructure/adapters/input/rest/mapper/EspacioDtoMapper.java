@@ -5,10 +5,6 @@ import com.um.espacios.domain.model.PuntoDeInteres;
 import com.um.espacios.domain.model.Ubicacion;
 import com.um.espacios.infrastructure.adapters.input.rest.dto.request.AsignarPuntosRequest;
 import com.um.espacios.infrastructure.adapters.input.rest.dto.request.CrearEspacioRequest;
-import com.um.espacios.infrastructure.adapters.input.rest.dto.response.EspacioResponse;
-import com.um.espacios.infrastructure.adapters.input.rest.dto.response.PuntoDeInteresResponse;
-import com.um.espacios.domain.model.*;
-import com.um.espacios.infrastructure.adapters.input.rest.dto.request.*;
 import com.um.espacios.infrastructure.adapters.input.rest.dto.response.*;
 import com.um.espacios.domain.model.EstadoEspacio;
 import org.mapstruct.*;
@@ -29,7 +25,7 @@ public interface EspacioDtoMapper {
 
     EspacioResponse toResponse(EspacioFisico espacio);
 
-    List<EspacioResponse> toResponseList(List<EspacioFisico> espacios);
+    List<EspacioDisponibleResponse> toDisponiblesResponse(List<EspacioFisico> espacios);
 
     @Mapping(target = "longitud", source = "longitud")
     @Mapping(target = "latitud", source = "latitud")

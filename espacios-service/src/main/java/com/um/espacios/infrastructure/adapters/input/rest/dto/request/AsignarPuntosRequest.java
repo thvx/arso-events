@@ -8,7 +8,6 @@ import java.util.List;
 
 @Getter
 @Setter
-@NoArgsConstructor
 @AllArgsConstructor
 @Builder
 @Component
@@ -18,7 +17,6 @@ public class AsignarPuntosRequest {
 
     @Getter
     @Setter
-    @NoArgsConstructor
     @AllArgsConstructor
     @Builder
     public static class PuntoDeInteresRequest {
