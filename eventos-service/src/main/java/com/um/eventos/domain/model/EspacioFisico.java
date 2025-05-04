@@ -4,12 +4,15 @@ import lombok.*;
 
 @Getter
 @Setter
-@NoArgsConstructor
-@AllArgsConstructor
 @Builder
 public class EspacioFisico {
     private String id;
     private String nombre;
-    private String direccion;
     private int capacidad;
+    private EstadoEspacio estado;
+
+    public enum EstadoEspacio {
+        ACTIVO,
+        CERRADO_TEMPORALMENTE
+    }
 }

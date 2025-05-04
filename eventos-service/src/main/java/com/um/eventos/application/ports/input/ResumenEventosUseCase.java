@@ -4,6 +4,6 @@ import com.um.eventos.domain.model.Evento;
 
 import java.util.List;
 
-public interface ObtenerEventosPorEspacioUseCase {
-    List<Evento> obtenerEventosPorEspacio(String id);
+public interface ResumenEventosUseCase {
+    List<Evento> obtenerEventosPorMes(String mes, String anio);
 }

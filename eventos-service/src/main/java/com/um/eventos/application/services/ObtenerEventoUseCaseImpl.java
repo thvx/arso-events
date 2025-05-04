@@ -1,4 +1,4 @@
-package com.um.eventos.application.service;
+package com.um.eventos.application.services;
 
 import com.um.eventos.application.ports.input.ObtenerEventoUseCase;
 import com.um.eventos.application.ports.output.EventoRepository;

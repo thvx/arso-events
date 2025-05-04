@@ -1,6 +1,6 @@
 package com.um.eventos.application.services;
 
-import com.um.eventos.application.ports.input.ObtenerEventosPorEspacioUseCase;
+import com.um.eventos.application.ports.input.ResumenEventosUseCase;
 import com.um.eventos.application.ports.output.EventoRepository;
 import com.um.eventos.domain.model.Evento;
 import jakarta.enterprise.context.ApplicationScoped;
@@ -10,16 +10,17 @@ import java.util.List;
 
 
 @ApplicationScoped
-public class ObtenerEventosPorEspacioUseCaseImpl implements ObtenerEventosPorEspacioUseCase {
+public class ResumenEventosUseCaseImpl implements ResumenEventosUseCase {
+
     private final EventoRepository eventoRepository;
 
     @Inject
-    public ObtenerEventosPorEspacioUseCaseImpl(EventoRepository eventoRepository) {
+    public ResumenEventosUseCaseImpl(EventoRepository eventoRepository) {
         this.eventoRepository = eventoRepository;
     }
 
     @Override
-    public List<Evento> obtenerEventosPorEspacio(String id){
-        return eventoRepository.buscarEventosEnEspacio(id, true);
+    public List<Evento> obtenerEventosPorMes(String mes, String anio) {
+        return eventoRepository.buscarPorFecha(mes, anio);
     }
 }

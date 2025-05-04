@@ -1,4 +1,4 @@
-package com.um.eventos.application.service;
+package com.um.eventos.application.services;
 
 import com.um.eventos.application.ports.input.CrearEventoUseCase;
 import com.um.eventos.application.ports.input.VerificarDisponibilidadUseCase;
@@ -28,9 +28,9 @@ public class CrearEventoUseCaseImpl implements CrearEventoUseCase {
 
     @Override
     public Evento crearEvento(String nombre, String descripcion, String organizador,
-                              int plazas, CategoriaEvento categoria,
-                              LocalDateTime fechaInicio, LocalDateTime fechaFin,
-                              String espacioId) throws EspacioNoDisponibleException, EntidadNoEncontradaException {
+                            int plazas, CategoriaEvento categoria,
+                            LocalDateTime fechaInicio, LocalDateTime fechaFin,
+                            String espacioId) throws EspacioNoDisponibleException, EntidadNoEncontradaException {
 
         validarFechas(fechaInicio, fechaFin);
 
@@ -56,8 +56,8 @@ public class CrearEventoUseCaseImpl implements CrearEventoUseCase {
     }
 
     private Optional<EspacioFisico> obtenerYValidarEspacio(String espacioId,
-                                                           LocalDateTime fechaInicio, LocalDateTime fechaFin,
-                                                           int plazas) throws EntidadNoEncontradaException, EspacioNoDisponibleException {
+                                                        LocalDateTime fechaInicio, LocalDateTime fechaFin,
+                                                        int plazas) throws EntidadNoEncontradaException, EspacioNoDisponibleException {
         if(verificarDisponibilidadUseCase.verificarDisponibilidad(espacioId, fechaInicio, fechaFin, plazas)){
             throw new EspacioNoDisponibleException("El espacio no está disponible en las fechas solicitadas");
         }else{
