@@ -3,9 +3,9 @@ package com.um.espacios.infrastructure.adapters.input.rest.controller;
 import com.um.espacios.application.ports.input.*;
 import com.um.espacios.domain.exceptions.EspacioConOcupacionesActivasException;
 import com.um.espacios.domain.model.EspacioFisico;
-import com.um.espacios.infrastructure.adapters.input.rest.dto.response.EspacioDisponibleResponse;
-import com.um.espacios.infrastructure.adapters.input.rest.dto.response.EspacioResponse;
+import com.um.espacios.infrastructure.adapters.input.rest.dto.response.EspacioCreadoResponse;
 import com.um.espacios.infrastructure.adapters.input.rest.dto.request.*;
+import com.um.espacios.infrastructure.adapters.input.rest.dto.response.EspacioResponse;
 import com.um.espacios.infrastructure.adapters.input.rest.mapper.EspacioDtoMapper;
 
 import jakarta.validation.Valid;
@@ -16,8 +16,6 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import java.net.URI;
-import java.time.LocalDateTime;
-import java.util.List;
 
 @RestController
 @RequestMapping("/api/espacios")
@@ -27,19 +25,20 @@ public class EspacioFisicoController {
     private final CrearEspacioUseCase crearEspacioUseCase;
     private final ModificarEspacioUseCase modificarEspacioUseCase;
     private final CambiarEstadoUseCase cambiarEstadoUseCase;
-    private final BuscarEspaciosDisponiblesUseCase buscarEspaciosDisponiblesUseCase;
-    private final AsignarPuntosDeInteresUseCase asignarPuntosUseCase;
+    private final ObtenerEspacioUseCase obtenerEspacioUseCase;
+    private final EliminarEspacioUseCase eliminarEspacioUseCase;
+
     @Qualifier("espacioDtoMapper")
     private final EspacioDtoMapper mapper;
 
     @PostMapping
-    public ResponseEntity<EspacioResponse> crearEspacio(
+    public ResponseEntity<EspacioCreadoResponse> crearEspacio(
             @RequestBody @Valid CrearEspacioRequest request) {
 
         EspacioFisico espacio = mapper.toDomain(request);
         espacio = crearEspacioUseCase.crear(espacio);
 
-        EspacioResponse response = mapper.toResponse(espacio);
+        EspacioCreadoResponse response = mapper.toResponse(espacio);
 
         URI location = ServletUriComponentsBuilder
                 .fromCurrentRequest()
@@ -48,15 +47,6 @@ public class EspacioFisicoController {
                 .toUri();
 
         return ResponseEntity.created(location).body(response);
-    }
-
-    @PutMapping("/{id}/puntos-interes")
-    public ResponseEntity<Void> asignarPuntosDeInteres(
-            @PathVariable String id,
-            @RequestBody @Valid AsignarPuntosRequest request) {
-
-        asignarPuntosUseCase.asignar(id, mapper.toPuntosDomain(request.getPuntos()));
-        return ResponseEntity.ok().build();
     }
 
     @PatchMapping("/{id}")
@@ -73,6 +63,16 @@ public class EspacioFisicoController {
         return ResponseEntity.ok().build();
     }
 
+    @PutMapping("/{id}/activar")
+    public ResponseEntity<Void> activarEspacio(@PathVariable String id) {
+        try{
+            cambiarEstadoUseCase.activar(id);
+            return ResponseEntity.ok().build();
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
+    }
+
     @PutMapping("/{id}/desactivar")
     public ResponseEntity<Void> desactivarEspacio(@PathVariable String id) {
         try {
@@ -85,21 +85,26 @@ public class EspacioFisicoController {
         }
     }
 
-    @PutMapping("/{id}/activar")
-    public ResponseEntity<Void> activarEspacio(@PathVariable String id) {
-        cambiarEstadoUseCase.activar(id);
-        return ResponseEntity.ok().build();
+    @GetMapping("/{id}")
+    public ResponseEntity<EspacioResponse> obtenerEspacio(@PathVariable String id) {
+        try{
+            EspacioFisico espacio = obtenerEspacioUseCase.obtenerEspacio(id);
+            EspacioResponse response = mapper.toEspacioResponse(espacio);
+            return ResponseEntity.ok(response);
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
     }
 
-    @GetMapping("/disponibles")
-    public ResponseEntity<List<EspacioDisponibleResponse>> buscarEspaciosDisponibles(
-            @RequestParam LocalDateTime fechaInicio,
-            @RequestParam LocalDateTime fechaFin,
-            @RequestParam int capacidadMin) {
-
-        List<EspacioFisico> espacios = buscarEspaciosDisponiblesUseCase
-                .buscar(fechaInicio, fechaFin, capacidadMin);
-
-        return ResponseEntity.ok(mapper.toDisponiblesResponse(espacios));
+    @DeleteMapping("/{id}")
+    public ResponseEntity<Void> eliminarEspacio(@PathVariable String id) {
+        try {
+            eliminarEspacioUseCase.eliminarEspacio(id);
+            return ResponseEntity.noContent().build();
+        } catch (EspacioConOcupacionesActivasException e) {
+            return ResponseEntity.badRequest().build();
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
     }
 }

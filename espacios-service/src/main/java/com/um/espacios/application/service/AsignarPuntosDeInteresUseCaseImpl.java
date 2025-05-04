@@ -19,7 +19,7 @@ public class AsignarPuntosDeInteresUseCaseImpl implements AsignarPuntosDeInteres
     public void asignar(String espacioId, List<PuntoDeInteres> puntos) {
         EspacioFisico espacio = espacioRepository.buscarPorId(espacioId)
                 .orElseThrow(() -> new IllegalArgumentException("Espacio no encontrado"));
-        espacio.asignarPuntosDeInteres(puntos);
+        espacioRepository.crearPuntosDeInteres(puntos);
         espacioRepository.actualizar(espacio);
     }
 }

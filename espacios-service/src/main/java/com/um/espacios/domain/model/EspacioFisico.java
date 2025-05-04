@@ -56,29 +56,33 @@ public class EspacioFisico {
         );
     }
 
-    public void asignarPuntosDeInteres(List<PuntoDeInteres> puntos) {
-        if (puntos == null) throw new IllegalArgumentException("La lista de puntos no puede ser nula");
-        this.puntosDeInteres = List.copyOf(puntos);
+    public void activar() throws Exception {
+        if (estado == EstadoEspacio.CERRADO_TEMPORALMENTE) {
+            estado = EstadoEspacio.ACTIVO;
+        } else {
+            throw new Exception("El espacio ya está activo");
+        }
+    }
+
+    public void desactivar() throws Exception {
+        if (estado == EstadoEspacio.ACTIVO) {
+            estado = EstadoEspacio.CERRADO_TEMPORALMENTE;
+        } else {
+            throw new Exception("El espacio ya está inactivo");
+        }
     }
 
     public void modificarDatos(String nombre, int capacidad, String descripcion) {
-        if (nombre == null || nombre.isBlank()) throw new IllegalArgumentException("El nombre no puede estar vacío");
-        if (capacidad <= 0) throw new IllegalArgumentException("La capacidad debe ser mayor que cero");
-
         this.nombre = nombre;
         this.capacidad = capacidad;
         this.descripcion = descripcion;
     }
 
-    public void desactivarEspacio(List<Ocupacion> ocupaciones) throws EspacioConOcupacionesActivasException {
-        if (ocupaciones.stream().anyMatch(Ocupacion::estaActiva)) {
-            throw new EspacioConOcupacionesActivasException("No se puede desactivar un espacio con ocupaciones activas");
+    public void asignarPuntosDeInteres(List<PuntoDeInteres> collect) {
+        if (this.puntosDeInteres == null) {
+            this.puntosDeInteres = collect;
+        } else {
+            this.puntosDeInteres.addAll(collect);
         }
-        this.estado = EstadoEspacio.CERRADO_TEMPORALMENTE;
     }
-
-    public void activar() {
-        this.estado = EstadoEspacio.ACTIVO;
-    }
-
 }

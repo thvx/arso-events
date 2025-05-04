@@ -23,9 +23,9 @@ public interface EspacioDtoMapper {
     @Mapping(target = "ubicacion", source = "ubicacion")
     EspacioFisico toDomainWithUbicacion(CrearEspacioRequest request);
 
-    EspacioResponse toResponse(EspacioFisico espacio);
+    EspacioCreadoResponse toResponse(EspacioFisico espacio);
 
-    List<EspacioDisponibleResponse> toDisponiblesResponse(List<EspacioFisico> espacios);
+    EspacioResponse toEspacioResponse(EspacioFisico espacio);
 
     @Mapping(target = "longitud", source = "longitud")
     @Mapping(target = "latitud", source = "latitud")

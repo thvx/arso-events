@@ -43,6 +43,14 @@
             <artifactId>spring-boot-starter-hateoas</artifactId>
             <version>3.4.0</version>
         </dependency>
+
+        <!-- Spring WebFlux para WebClient -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-webflux</artifactId>
+            <version>${spring.boot.version}</version>
+        </dependency>
+
         <dependency>
             <groupId>org.mapstruct</groupId>
             <artifactId>mapstruct</artifactId>
