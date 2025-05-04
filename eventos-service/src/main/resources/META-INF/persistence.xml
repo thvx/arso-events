@@ -1,0 +1,15 @@
+<persistence-unit name="eventos" transaction-type="JTA">
+    <jta-data-source>java:comp/DefaultDataSource</jta-data-source>
+    <class>com.um.eventos.infrastructure.adapters.output.persistence.entity.EventoEntity</class>
+    <exclude-unlisted-classes>true</exclude-unlisted-classes>
+    <properties>
+        <property name="jakarta.persistence.schema-generation.database.action" value="update"/>
+        <property name="jakarta.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/eventos_db"/>
+        <property name="jakarta.persistence.jdbc.user" value="root"/>
+        <property name="jakarta.persistence.jdbc.password" value="1234567890"/>
+        <property name="jakarta.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver"/>
+        <property name="hibernate.dialect" value="org.hibernate.dialect.MySQL8Dialect"/>
+        <property name="hibernate.show_sql" value="true"/>
+        <property name="hibernate.format_sql" value="true"/>
+    </properties>
+</persistence-unit>
