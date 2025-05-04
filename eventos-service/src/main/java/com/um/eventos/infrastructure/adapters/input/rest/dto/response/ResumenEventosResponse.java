@@ -6,10 +6,12 @@ import lombok.NoArgsConstructor;
 import java.time.LocalDateTime;
 import java.util.List;
 
+import com.um.eventos.domain.model.Evento;
+
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class ResumenEventoResponse {
+public class ResumenEventosResponse {
     private String nombre;
     private String descripcion;
     private LocalDateTime fechaInicio;
@@ -25,4 +27,11 @@ public class ResumenEventoResponse {
         private String nombre;
         private double distancia;
     }
+
+    private List<Evento> eventos;
+    
+    public ResumenEventosResponse(List<Evento> eventos) {
+        this.eventos = eventos;
+    }
+
 }

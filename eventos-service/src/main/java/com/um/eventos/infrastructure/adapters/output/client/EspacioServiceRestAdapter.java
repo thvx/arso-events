@@ -1,8 +1,8 @@
-package com.um.eventos.infrastructure.adapters.output.rest;
+package com.um.eventos.infrastructure.adapters.output.client;
 
 import com.um.eventos.application.ports.output.EspacioServicePort;
 import com.um.eventos.domain.model.EspacioFisico;
-import com.um.eventos.infrastructure.adapters.output.rest.dto.EspacioResponseDTO;
+import com.um.eventos.infrastructure.adapters.output.client.dto.EspacioResponseDTO;
 import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.inject.Inject;
 import jakarta.ws.rs.Produces;

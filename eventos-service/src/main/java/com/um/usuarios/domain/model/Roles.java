@@ -1,4 +1,7 @@
 package com.um.usuarios.domain.model;
 
-public class Roles {
+public enum Roles {
+    GESTOR_EVENTOS,
+    USUARIO,
+    PROPIETARIO_ESPACIOS
 }

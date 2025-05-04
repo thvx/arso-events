@@ -7,6 +7,6 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class EventoResponse {
+public class EventoCreadoResponse {
     private String id;
 }

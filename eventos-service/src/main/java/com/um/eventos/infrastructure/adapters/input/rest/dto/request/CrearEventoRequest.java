@@ -1,21 +1,19 @@
-package com.um.eventos.infrastructure.adapters.input.rest.dto;
+package com.um.eventos.infrastructure.adapters.input.rest.dto.request;
 
 import com.um.eventos.domain.model.CategoriaEvento;
 import jakarta.validation.constraints.Future;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Positive;
 import lombok.AllArgsConstructor;
-import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.time.LocalDateTime;
 
 @Data
-@Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class EventoRequest {
+public class CrearEventoRequest {
     @NotBlank(message = "Nombre es requerido")
     private String nombre;
 

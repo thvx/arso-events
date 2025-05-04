@@ -1,8 +1,7 @@
-package com.um.eventos.infrastructure.adapters.output.persistence.entity;
+package com.um.eventos.infrastructure.adapters.output.persistence.entities;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Embeddable;
-import jakarta.persistence.Id;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;

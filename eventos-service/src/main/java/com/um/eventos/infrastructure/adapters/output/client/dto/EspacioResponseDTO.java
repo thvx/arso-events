@@ -1,4 +1,4 @@
-package com.um.eventos.infrastructure.adapters.output.rest.dto;
+package com.um.eventos.infrastructure.adapters.output.client.dto;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Data;
