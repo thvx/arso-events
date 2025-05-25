@@ -1,0 +1,36 @@
+server:
+  port: 8083
+
+spring:
+  cloud:
+    inetutils:
+      preferred-networks: 127.0.0.1
+      ignore-loopback-interfaces: false
+  security:
+    oauth2:
+      client:
+        registration:
+          github:
+            client-id: ${GITHUB_CLIENT_ID}
+            client-secret: ${GITHUB_CLIENT_SECRET}
+            scope: user:email
+
+security:
+  jwt:
+    secret: ${JWT_SECRET:defaultSecretKey}
+    validity: ${JWT_VALIDITY:3600}
+
+zuul:
+  routes:
+    eventos:
+      path: /api/eventos/**
+      url: http://eventos-service:8080/api/eventos
+      sensitiveHeaders: Cookie,Set-Cookie
+    espacios:
+      path: /api/espacios/**
+      url: http://espacios-service:8081/api/espacios
+      sensitiveHeaders: Cookie,Set-Cookie
+    reservas:
+      path: /api/reservas/**
+      url: http://reservas-service:8082/api/reservas
+      sensitiveHeaders: Cookie,Set-Cookie

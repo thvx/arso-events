@@ -8,7 +8,6 @@ import org.springframework.stereotype.Component;
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 
-@Component
 public class JwtPreFilter extends ZuulFilter {
 
     @Override
