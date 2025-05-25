@@ -1,8 +1,9 @@
 package com.um.eventos.infrastructure.adapters.input.rest.mapper;
 
 import com.um.eventos.domain.model.Evento;
-import com.um.eventos.infrastructure.adapters.input.rest.dto.request.*;
-import com.um.eventos.infrastructure.adapters.input.rest.dto.response.*;
+import com.um.eventos.infrastructure.adapters.input.rest.dto.request.EventoRequestDTO;
+import com.um.eventos.infrastructure.adapters.input.rest.dto.response.EventoResponseDTO;
+import com.um.eventos.infrastructure.adapters.input.rest.dto.response.ResumenEventoDTO;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 

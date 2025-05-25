@@ -48,6 +48,15 @@ public class Evento {
         this.organizador = organizador;
     }
 
+    @Override
+    public Evento clone() {
+        try {
+            return (Evento) super.clone();
+        } catch (CloneNotSupportedException e) {
+            throw new AssertionError("Clonación no soportada", e);
+        }
+    }
+
 
     public Evento modificar(String descripcion, LocalDateTime fechaInicio,
                             LocalDateTime fechaFin, Integer plazas, EspacioFisico espacio) {

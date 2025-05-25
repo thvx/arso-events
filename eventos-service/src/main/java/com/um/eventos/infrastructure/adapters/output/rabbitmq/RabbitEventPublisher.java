@@ -7,6 +7,7 @@ import com.um.eventos.application.ports.output.EventPublisherPort;
 import com.um.eventos.domain.events.DomainEvent;
 import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.inject.Inject;
+
 import java.nio.charset.StandardCharsets;
 
 @ApplicationScoped

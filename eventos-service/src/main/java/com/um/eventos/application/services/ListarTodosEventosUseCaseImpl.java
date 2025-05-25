@@ -5,6 +5,7 @@ import com.um.eventos.application.ports.output.EventoRepository;
 import com.um.eventos.domain.model.Evento;
 import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.inject.Inject;
+
 import java.util.List;
 
 @ApplicationScoped

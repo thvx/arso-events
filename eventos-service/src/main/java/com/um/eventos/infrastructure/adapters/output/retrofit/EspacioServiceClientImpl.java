@@ -1,11 +1,12 @@
 package com.um.eventos.infrastructure.adapters.output.retrofit;
 
 import com.um.eventos.application.ports.output.EspacioServicePort;
-import com.um.eventos.domain.model.EspacioFisico;
 import com.um.eventos.domain.exceptions.ExternalServiceException;
+import com.um.eventos.domain.model.EspacioFisico;
 import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.inject.Inject;
 import retrofit2.Response;
+
 import java.io.IOException;
 import java.util.Optional;
 

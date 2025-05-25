@@ -1,10 +1,10 @@
 package com.um.eventos.infrastructure.config;
 
-import retrofit2.Retrofit;
-import retrofit2.converter.gson.GsonConverterFactory;
+import com.um.eventos.infrastructure.adapters.output.retrofit.RetrofitEspacioApi;
 import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.enterprise.inject.Produces;
-import com.um.eventos.infrastructure.adapters.output.retrofit.RetrofitEspacioApi;
+import retrofit2.Retrofit;
+import retrofit2.converter.gson.GsonConverterFactory;
 
 @ApplicationScoped
 public class RetrofitConfig {

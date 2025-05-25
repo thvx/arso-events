@@ -1,8 +1,8 @@
 package com.um.eventos.infrastructure.config;
 
+import com.rabbitmq.client.ConnectionFactory;
 import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.enterprise.inject.Produces;
-import com.rabbitmq.client.ConnectionFactory;
 
 @ApplicationScoped
 public class RabbitMQConfig {

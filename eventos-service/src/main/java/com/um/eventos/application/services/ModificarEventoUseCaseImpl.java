@@ -2,9 +2,9 @@ package com.um.eventos.application.services;
 
 import com.um.eventos.application.ports.input.ModificarEventoUseCase;
 import com.um.eventos.application.ports.input.VerificarDisponibilidadUseCase;
+import com.um.eventos.application.ports.output.EspacioServicePort;
 import com.um.eventos.application.ports.output.EventPublisherPort;
 import com.um.eventos.application.ports.output.EventoRepository;
-import com.um.eventos.application.ports.output.EspacioServicePort;
 import com.um.eventos.domain.events.EventoCanceladoEvent;
 import com.um.eventos.domain.events.EventoModificadoEvent;
 import com.um.eventos.domain.exceptions.*;

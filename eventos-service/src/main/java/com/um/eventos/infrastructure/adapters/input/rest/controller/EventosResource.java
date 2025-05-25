@@ -1,17 +1,21 @@
 package com.um.eventos.infrastructure.adapters.input.rest.controller;
 
 import com.um.eventos.application.ports.input.*;
-import com.um.eventos.domain.model.Evento;
 import com.um.eventos.domain.exceptions.EntidadNoEncontradaException;
 import com.um.eventos.domain.exceptions.EspacioNoDisponibleException;
-import com.um.eventos.infrastructure.adapters.input.rest.dto.request.*;
-import com.um.eventos.infrastructure.adapters.input.rest.dto.response.*;
+import com.um.eventos.domain.model.Evento;
+import com.um.eventos.infrastructure.adapters.input.rest.dto.request.EventoRequestDTO;
+import com.um.eventos.infrastructure.adapters.input.rest.dto.response.EventoCreadoDTO;
+import com.um.eventos.infrastructure.adapters.input.rest.dto.response.EventoResponseDTO;
+import com.um.eventos.infrastructure.adapters.input.rest.dto.response.ResumenEventoDTO;
 import com.um.eventos.infrastructure.adapters.input.rest.mapper.EventoRestMapper;
 import jakarta.inject.Inject;
 import jakarta.validation.Valid;
 import jakarta.ws.rs.*;
 import jakarta.ws.rs.core.MediaType;
 import jakarta.ws.rs.core.Response;
+import jakarta.ws.rs.core.UriBuilder;
+import jakarta.ws.rs.core.UriInfo;
 import lombok.Getter;
 import org.mapstruct.Context;
 
@@ -24,7 +28,6 @@ import java.util.stream.Collectors;
 @Consumes(MediaType.APPLICATION_JSON)
 public class EventosResource {
 
-    @Context
     private UriInfo uriInfo;
 
     @Inject
