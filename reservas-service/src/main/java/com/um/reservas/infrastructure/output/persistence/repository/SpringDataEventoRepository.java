@@ -1,4 +1,7 @@
-package com.um.reservas.infrastructure.persistence.repository;
+package com.um.reservas.infrastructure.output.persistence.repository;
 
-public class SpringDataEventoRepository {
+import com.um.reservas.infrastructure.output.persistence.entity.ReservaDocument;
+import org.springframework.data.mongodb.repository.MongoRepository;
+
+public interface SpringDataEventoRepository extends MongoRepository<ReservaDocument, String> {
 }

@@ -1,6 +1,5 @@
-package com.um.reservas.application.dto;
+package com.um.reservas.infrastructure.adapters.input.rest.dto;
 
-import com.um.reservas.domain.model.Reserva;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -12,11 +11,8 @@ import lombok.Setter;
 @AllArgsConstructor
 public class ReservaResponseDTO {
     private String id;
-    private String eventoId;
-    private String usuarioId;
+    private String idUsuario;
     private int plazasReservadas;
     private boolean cancelada;
-
-    public ReservaResponseDTO(Reserva reserva) {
-    }
+    private String eventoId;
 }

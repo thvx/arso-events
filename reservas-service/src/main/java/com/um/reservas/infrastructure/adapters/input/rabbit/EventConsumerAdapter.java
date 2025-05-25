@@ -2,7 +2,6 @@ package com.um.reservas.infrastructure.adapters.input.rabbit;
 
 import com.um.reservas.application.ports.input.EventConsumerPort;
 import com.um.reservas.application.ports.output.ReservaRepositoryPort;
-import com.um.reservas.domain.model.Evento;
 import com.um.reservas.domain.model.Reserva;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -34,6 +33,6 @@ public class EventConsumerAdapter implements EventConsumerPort {
 
     @Override
     public void handleEventoCreado(String evento) {
-        log.info("Recibido evento de creación para evento ID: {}", evento;
+        log.info("Recibido evento de creación para evento ID: {}", evento);
     }
 }

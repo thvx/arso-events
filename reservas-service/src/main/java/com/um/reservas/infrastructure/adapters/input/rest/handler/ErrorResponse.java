@@ -1,18 +1,16 @@
-package com.um.reservas.infrastructure;
+package com.um.reservas.infrastructure.adapters.input.rest.handler;
 
+import lombok.AllArgsConstructor;
 import lombok.Getter;
-
-import java.time.Instant;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 @Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
 public class ErrorResponse {
-    private String code;
+    private int status;
+    private String error;
     private String message;
-    private Instant timestamp;
-
-    public ErrorResponse(String code, String message) {
-        this.code = code;
-        this.message = message;
-        this.timestamp = Instant.now();
-    }
 }
