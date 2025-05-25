@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="c3129b50-03c2-4b84-815f-8378761b324b" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../docker-compose.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../espacios-service-demo/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../espacios-service-demo/src/main/java/com/um/espacios/application/ports/input/AsignarPuntosDeInteresUseCase.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../espacios-service-demo/src/main/java/com/um/espacios/application/ports/input/CambiarEstadoUseCase.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../espacios-service-demo/src/main/java/com/um/espacios/application/ports/input/CrearEspacioUseCase.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../espacios-service-demo/src/main/java/com/um/espacios/application/ports/input/EliminarEspacioUseCase.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../espacios-service-demo/src/main/java/com/um/espacios/application/ports/input/ListarEspaciosUseCase.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../espacios-service-demo/src/main/java/com/um/espacios/application/ports/input/ModificarEspacioUseCase.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../espacios-service-demo/src/main/java/com/um/espacios/application/ports/input/ObtenerEspacioUseCase.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../espacios-service-demo/src/main/java/com/um/espacios/application/ports/input/ObtenerPuntosDeInteresUseCase.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../espacios-service-demo/src/main/java/com/um/espacios/application/ports/output/EspacioRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../espacios-service-demo/src/main/java/com/um/espacios/application/ports/output/EventPublisherPort.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../espacios-service-demo/src/main/java/com/um/espacios/application/ports/output/EventoServicePort.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../espacios-service-demo/src/main/java/com/um/espacios/application/service/AsignarPuntosDeInteresUseCaseImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../espacios-service-demo/src/main/java/com/um/espacios/application/service/CambiarEstadoEspacioUseCaseImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../espacios-service-demo/src/main/java/com/um/espacios/application/service/CrearEspacioUseCaseImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../espacios-service-demo/src/main/java/com/um/espacios/application/service/EliminarEspacioUseCaseImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../espacios-service-demo/src/main/java/com/um/espacios/application/service/ListarEspaciosUseCaseImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../espacios-service-demo/src/main/java/com/um/espacios/application/service/ModificarEspacioUseCaseImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../espacios-service-demo/src/main/java/com/um/espacios/application/service/ObtenerEspacioUseCaseImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../espacios-service-demo/src/main/java/com/um/espacios/application/service/ObtenerPuntosDeInteresUseCaseImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../espacios-service-demo/src/main/java/com/um/espacios/domain/events/EspacioActivadoEvent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../espacios-service-demo/src/main/java/com/um/espacios/domain/events/EspacioCreadoEvent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../espacios-service-demo/src/main/java/com/um/espacios/domain/events/EspacioDesactivadoEvent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../espacios-service-demo/src/main/java/com/um/espacios/domain/events/PuntosInteresAsignadosEvent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../espacios-service-demo/src/main/java/com/um/espacios/domain/exceptions/EntidadNoEncontradaException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../espacios-service-demo/src/main/java/com/um/espacios/domain/exceptions/EspacioConOcupacionesActivasException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../espacios-service-demo/src/main/java/com/um/espacios/domain/exceptions/RepositorioException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../espacios-service-demo/src/main/java/com/um/espacios/domain/exceptions/ServicioNoDisponibleException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../espacios-service-demo/src/main/java/com/um/espacios/domain/model/EspacioFisico.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../espacios-service-demo/src/main/java/com/um/espacios/domain/model/EstadoEspacio.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../espacios-service-demo/src/main/java/com/um/espacios/domain/model/PuntoDeInteres.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../espacios-service-demo/src/main/java/com/um/espacios/domain/model/Ubicacion.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../espacios-service-demo/src/main/java/com/um/espacios/infrastructure/adapters/input/rest/controller/EspacioFisicoController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../espacios-service-demo/src/main/java/com/um/espacios/infrastructure/adapters/input/rest/dto/request/AsignarPuntosRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../espacios-service-demo/src/main/java/com/um/espacios/infrastructure/adapters/input/rest/dto/request/CrearEspacioRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../espacios-service-demo/src/main/java/com/um/espacios/infrastructure/adapters/input/rest/dto/request/ModificarEspacioRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../espacios-service-demo/src/main/java/com/um/espacios/infrastructure/adapters/input/rest/dto/response/EspacioCreadoResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../espacios-service-demo/src/main/java/com/um/espacios/infrastructure/adapters/input/rest/dto/response/EspacioResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../espacios-service-demo/src/main/java/com/um/espacios/infrastructure/adapters/input/rest/dto/response/PuntoDeInteresResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../espacios-service-demo/src/main/java/com/um/espacios/infrastructure/adapters/input/rest/handler/ErrorResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../espacios-service-demo/src/main/java/com/um/espacios/infrastructure/adapters/input/rest/handler/GlobalExceptionHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../espacios-service-demo/src/main/java/com/um/espacios/infrastructure/adapters/input/rest/mapper/EspacioDtoMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../espacios-service-demo/src/main/java/com/um/espacios/infrastructure/adapters/input/rest/mapper/PuntoDeInteresDtoMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../espacios-service-demo/src/main/java/com/um/espacios/infrastructure/adapters/output/persistence/entitiy/EspacioFisicoDocument.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../espacios-service-demo/src/main/java/com/um/espacios/infrastructure/adapters/output/persistence/entitiy/PuntoDeInteresDocument.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../espacios-service-demo/src/main/java/com/um/espacios/infrastructure/adapters/output/persistence/mapper/EspacioEntityMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../espacios-service-demo/src/main/java/com/um/espacios/infrastructure/adapters/output/persistence/repository/MongoEspacioRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../espacios-service-demo/src/main/java/com/um/espacios/infrastructure/adapters/output/persistence/repository/SpringDataEspacioRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../espacios-service-demo/src/main/java/com/um/espacios/infrastructure/adapters/output/rabbitmq/RabbitEventPublisherAdapter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../espacios-service-demo/src/main/java/com/um/espacios/infrastructure/adapters/output/retrofit/RetrofitEventoApi.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../espacios-service-demo/src/main/java/com/um/espacios/infrastructure/adapters/output/retrofit/RetrofitEventoServiceAdapter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../espacios-service-demo/src/main/java/com/um/espacios/infrastructure/config/ApiClientsConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../espacios-service-demo/src/main/java/com/um/espacios/infrastructure/config/MongoConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../espacios-service-demo/src/main/java/com/um/espacios/infrastructure/config/RabbitMQConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../espacios-service-demo/src/main/java/com/um/espacios/infrastructure/config/RetrofitConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../espacios-service-demo/src/main/java/com/um/espacios/infrastructure/config/SwaggerConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../espacios-service/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../espacios-service/docker-compose.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/um/eventos/application/ports/input/CrearEventoUseCase.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/um/eventos/application/ports/input/EliminarEventoUseCase.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/um/eventos/application/ports/input/ListarEventosUseCase.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/um/eventos/application/ports/input/ListarTodosEventosUseCase.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/um/eventos/application/ports/input/ModificarEventoUseCase.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/um/eventos/application/ports/input/ObtenerEventoUseCase.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/um/eventos/application/ports/input/ObtenerEventosPorEspacioUseCase.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/um/eventos/application/ports/input/ResumenEventosUseCase.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/um/eventos/application/ports/input/VerificarDisponibilidadUseCase.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/um/eventos/application/ports/output/EspacioServicePort.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/um/eventos/application/ports/output/EventPublisherPort.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/um/eventos/application/ports/output/EventoRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/um/eventos/application/services/CrearEventoUseCaseImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/um/eventos/application/services/EliminarEventoUseCaseImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/um/eventos/application/services/ListarEventosUseCaseImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/um/eventos/application/services/ListarTodosEventosUseCaseImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/um/eventos/application/services/ModificarEventoUseCaseImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/um/eventos/application/services/ObtenerEventoUseCaseImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/um/eventos/application/services/ObtenerEventosPorEspacioUseCaseImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/um/eventos/application/services/ResumenEventosUseCaseImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/um/eventos/application/services/VerificarDisponibilidadUseCaseImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/um/eventos/domain/events/DomainEvent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/um/eventos/domain/events/EventoCanceladoEvent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/um/eventos/domain/events/EventoCreadoEvent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/um/eventos/domain/events/EventoModificadoEvent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/um/eventos/domain/events/LocalDateTimeAdapter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/um/eventos/domain/exceptions/EntidadNoEncontradaException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/um/eventos/domain/exceptions/EspacioConOcupacionesActivasException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/um/eventos/domain/exceptions/EspacioNoDisponibleException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/um/eventos/domain/exceptions/EventoException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/um/eventos/domain/exceptions/ExternalServiceException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/um/eventos/domain/exceptions/InvalidEventDataException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/um/eventos/domain/model/CategoriaEvento.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/um/eventos/domain/model/EspacioFisico.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/um/eventos/domain/model/Evento.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/um/eventos/domain/model/Ocupacion.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/um/eventos/infrastructure/adapters/input/rest/controller/EventosResource.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/um/eventos/infrastructure/adapters/input/rest/dto/request/EventoRequestDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/um/eventos/infrastructure/adapters/input/rest/dto/response/EventoCreadoDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/um/eventos/infrastructure/adapters/input/rest/dto/response/EventoResponseDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/um/eventos/infrastructure/adapters/input/rest/dto/response/ResumenEventoDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/um/eventos/infrastructure/adapters/input/rest/mapper/EventoRestMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/um/eventos/infrastructure/adapters/output/persistence/EventoRepositoryImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/um/eventos/infrastructure/adapters/output/rabbitmq/RabbitEventPublisher.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/um/eventos/infrastructure/adapters/output/retrofit/EspacioServiceClientImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/um/eventos/infrastructure/adapters/output/retrofit/RetrofitEspacioApi.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/um/eventos/infrastructure/adapters/output/retrofit/RetrofitEspacioService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/um/eventos/infrastructure/config/JaxRsConfiguration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/um/eventos/infrastructure/config/PersistenceConfiguration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/um/eventos/infrastructure/config/RabbitMQConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/um/eventos/infrastructure/config/RetrofitConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../eventos-service/src/main/java/com/um/eventos/application/ports/input/ListarTodosEventosUseCase.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../eventos-service/src/main/java/com/um/eventos/application/ports/output/EventPublisherPort.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../eventos-service/src/main/java/com/um/eventos/application/services/ListarTodosEventosUseCaseImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../eventos-service/src/main/java/com/um/eventos/domain/events/DomainEvent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../eventos-service/src/main/java/com/um/eventos/domain/events/EventoCanceladoEvent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../eventos-service/src/main/java/com/um/eventos/domain/events/EventoCreadoEvent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../eventos-service/src/main/java/com/um/eventos/domain/events/EventoModificadoEvent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../eventos-service/src/main/java/com/um/eventos/domain/events/LocalDateTimeAdapter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../eventos-service/src/main/java/com/um/eventos/domain/exceptions/ExternalServiceException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../eventos-service/src/main/java/com/um/eventos/infrastructure/adapters/input/rest/controller/EventosResource.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../eventos-service/src/main/java/com/um/eventos/infrastructure/adapters/input/rest/dto/request/EventoRequestDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../eventos-service/src/main/java/com/um/eventos/infrastructure/adapters/input/rest/dto/response/EventoCreadoDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../eventos-service/src/main/java/com/um/eventos/infrastructure/adapters/input/rest/dto/response/EventoResponseDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../eventos-service/src/main/java/com/um/eventos/infrastructure/adapters/input/rest/dto/response/ResumenEventoDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../eventos-service/src/main/java/com/um/eventos/infrastructure/adapters/input/rest/mapper/EventoRestMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../eventos-service/src/main/java/com/um/eventos/infrastructure/adapters/output/persistence/EventoRepositoryImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../eventos-service/src/main/java/com/um/eventos/infrastructure/adapters/output/rabbitmq/RabbitEventPublisher.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../eventos-service/src/main/java/com/um/eventos/infrastructure/adapters/output/retrofit/EspacioServiceClientImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../eventos-service/src/main/java/com/um/eventos/infrastructure/adapters/output/retrofit/RetrofitEspacioApi.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../eventos-service/src/main/java/com/um/eventos/infrastructure/adapters/output/retrofit/RetrofitEspacioService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../eventos-service/src/main/java/com/um/eventos/infrastructure/config/JaxRsConfiguration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../eventos-service/src/main/java/com/um/eventos/infrastructure/config/PersistenceConfiguration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../eventos-service/src/main/java/com/um/eventos/infrastructure/config/RabbitMQConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../eventos-service/src/main/java/com/um/eventos/infrastructure/config/RetrofitConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pasarela/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pasarela/src/main/java/com/um/pasarela/config/SecurityConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pasarela/src/main/java/com/um/pasarela/config/ZuulConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pasarela/src/main/java/com/um/pasarela/controller/AuthController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pasarela/src/main/java/com/um/pasarela/dto/AuthResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pasarela/src/main/java/com/um/pasarela/dto/LoginRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pasarela/src/main/java/com/um/pasarela/filter/JwtPreFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pasarela/src/main/java/com/um/pasarela/filter/JwtTokenFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pasarela/src/main/java/com/um/pasarela/filter/JwtTokenProvider.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pasarela/src/main/java/com/um/pasarela/model/Usuario.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pasarela/src/main/java/com/um/pasarela/service/UsuarioService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pasarela/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../reservas-service/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../reservas-service/src/main/java/com/um/reservas/ReservasServiceApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../reservas-service/src/main/java/com/um/reservas/application/exception/ApplicationException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../reservas-service/src/main/java/com/um/reservas/application/exception/EventoNoEncontradoException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../reservas-service/src/main/java/com/um/reservas/application/exception/ReservaNoAceptadaException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../reservas-service/src/main/java/com/um/reservas/application/exception/ReservaNoEncontradaException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../reservas-service/src/main/java/com/um/reservas/application/ports/input/EventConsumerPort.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../reservas-service/src/main/java/com/um/reservas/application/ports/input/ReservaServicePort.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../reservas-service/src/main/java/com/um/reservas/application/ports/output/EventPublisherPort.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../reservas-service/src/main/java/com/um/reservas/application/ports/output/EventoRepositoryPort.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../reservas-service/src/main/java/com/um/reservas/application/ports/output/ReservaRepositoryPort.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../reservas-service/src/main/java/com/um/reservas/application/service/ReservaService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../reservas-service/src/main/java/com/um/reservas/domain/event/EventoCanceladoEvent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../reservas-service/src/main/java/com/um/reservas/domain/event/EventoCreadoEvent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../reservas-service/src/main/java/com/um/reservas/domain/event/ReservaCanceladaEvent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../reservas-service/src/main/java/com/um/reservas/domain/event/ReservaCreadaEvent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../reservas-service/src/main/java/com/um/reservas/domain/model/Evento.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../reservas-service/src/main/java/com/um/reservas/domain/model/Reserva.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../reservas-service/src/main/java/com/um/reservas/infrastructure/adapters/input/rabbit/EventConsumerAdapter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../reservas-service/src/main/java/com/um/reservas/infrastructure/adapters/input/rabbit/RabbitMQEventListener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../reservas-service/src/main/java/com/um/reservas/infrastructure/adapters/input/rest/controller/ReservaController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../reservas-service/src/main/java/com/um/reservas/infrastructure/adapters/input/rest/dto/CrearReservaRequestDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../reservas-service/src/main/java/com/um/reservas/infrastructure/adapters/input/rest/dto/EventoResponseDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../reservas-service/src/main/java/com/um/reservas/infrastructure/adapters/input/rest/dto/ReservaResponseDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../reservas-service/src/main/java/com/um/reservas/infrastructure/adapters/input/rest/handler/ErrorResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../reservas-service/src/main/java/com/um/reservas/infrastructure/adapters/input/rest/handler/GlobalExceptionHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../reservas-service/src/main/java/com/um/reservas/infrastructure/adapters/input/rest/mapper/EventoDtoMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../reservas-service/src/main/java/com/um/reservas/infrastructure/adapters/input/rest/mapper/ReservaDtoMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../reservas-service/src/main/java/com/um/reservas/infrastructure/config/ApiClientsConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../reservas-service/src/main/java/com/um/reservas/infrastructure/config/MongoConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../reservas-service/src/main/java/com/um/reservas/infrastructure/config/RabbitMQConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../reservas-service/src/main/java/com/um/reservas/infrastructure/config/RetrofitConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../reservas-service/src/main/java/com/um/reservas/infrastructure/config/SwaggerConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../reservas-service/src/main/java/com/um/reservas/infrastructure/output/persistence/EventoPersistenceAdapter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../reservas-service/src/main/java/com/um/reservas/infrastructure/output/persistence/ReservaPersistenceAdapter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../reservas-service/src/main/java/com/um/reservas/infrastructure/output/persistence/entity/EventoDocument.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../reservas-service/src/main/java/com/um/reservas/infrastructure/output/persistence/entity/ReservaDocument.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../reservas-service/src/main/java/com/um/reservas/infrastructure/output/persistence/mapper/EventoEntityMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../reservas-service/src/main/java/com/um/reservas/infrastructure/output/persistence/mapper/ReservaEntityMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../reservas-service/src/main/java/com/um/reservas/infrastructure/output/persistence/repository/EventoMongoRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../reservas-service/src/main/java/com/um/reservas/infrastructure/output/persistence/repository/ReservaMongoRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../reservas-service/src/main/java/com/um/reservas/infrastructure/output/persistence/repository/SpringDataEventoRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../reservas-service/src/main/java/com/um/reservas/infrastructure/output/rabbit/RabbitMQEventPublisher.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../reservas-service/src/main/java/com/um/reservas/infrastructure/output/retrofit/RetrofitEventosService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../espacios-service/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../espacios-service/src/main/java/com/um/espacios/domain/model/EspacioFisico.java" beforeDir="false" afterPath="$PROJECT_DIR$/../espacios-service/src/main/java/com/um/espacios/domain/model/EspacioFisico.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../espacios-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../espacios-service/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../eventos-service/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../eventos-service/src/main/java/com/um/eventos/EventosServiceApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../eventos-service/src/main/java/com/um/eventos/application/ports/input/CrearEventoUseCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/../eventos-service/src/main/java/com/um/eventos/application/ports/input/CrearEventoUseCase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../eventos-service/src/main/java/com/um/eventos/application/ports/input/ModificarEventoUseCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/../eventos-service/src/main/java/com/um/eventos/application/ports/input/ModificarEventoUseCase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../eventos-service/src/main/java/com/um/eventos/application/ports/output/EspacioServicePort.java" beforeDir="false" afterPath="$PROJECT_DIR$/../eventos-service/src/main/java/com/um/eventos/application/ports/output/EspacioServicePort.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../eventos-service/src/main/java/com/um/eventos/application/ports/output/EventoRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../eventos-service/src/main/java/com/um/eventos/application/ports/output/EventoRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../eventos-service/src/main/java/com/um/eventos/application/services/CrearEventoUseCaseImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../eventos-service/src/main/java/com/um/eventos/application/services/CrearEventoUseCaseImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../eventos-service/src/main/java/com/um/eventos/application/services/EliminarEventoUseCaseImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../eventos-service/src/main/java/com/um/eventos/application/services/EliminarEventoUseCaseImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../eventos-service/src/main/java/com/um/eventos/application/services/ModificarEventoUseCaseImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../eventos-service/src/main/java/com/um/eventos/application/services/ModificarEventoUseCaseImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../eventos-service/src/main/java/com/um/eventos/application/services/ObtenerEventoUseCaseImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../eventos-service/src/main/java/com/um/eventos/application/services/ObtenerEventoUseCaseImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../eventos-service/src/main/java/com/um/eventos/application/services/ObtenerEventosPorEspacioUseCaseImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../eventos-service/src/main/java/com/um/eventos/application/services/ObtenerEventosPorEspacioUseCaseImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../eventos-service/src/main/java/com/um/eventos/application/services/ResumenEventosUseCaseImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../eventos-service/src/main/java/com/um/eventos/application/services/ResumenEventosUseCaseImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../eventos-service/src/main/java/com/um/eventos/application/services/VerificarDisponibilidadUseCaseImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../eventos-service/src/main/java/com/um/eventos/application/services/VerificarDisponibilidadUseCaseImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../eventos-service/src/main/java/com/um/eventos/domain/exceptions/ApiIntegrationException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../eventos-service/src/main/java/com/um/eventos/domain/model/EspacioFisico.java" beforeDir="false" afterPath="$PROJECT_DIR$/../eventos-service/src/main/java/com/um/eventos/domain/model/EspacioFisico.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../eventos-service/src/main/java/com/um/eventos/domain/model/Evento.java" beforeDir="false" afterPath="$PROJECT_DIR$/../eventos-service/src/main/java/com/um/eventos/domain/model/Evento.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../eventos-service/src/main/java/com/um/eventos/domain/model/Ocupacion.java" beforeDir="false" afterPath="$PROJECT_DIR$/../eventos-service/src/main/java/com/um/eventos/domain/model/Ocupacion.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../eventos-service/src/main/java/com/um/eventos/infrastructure/adapters/input/rest/EventoResource.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../eventos-service/src/main/java/com/um/eventos/infrastructure/adapters/input/rest/dto/ErrorResponse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../eventos-service/src/main/java/com/um/eventos/infrastructure/adapters/input/rest/dto/request/CrearEventoRequest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../eventos-service/src/main/java/com/um/eventos/infrastructure/adapters/input/rest/dto/request/ModificarEventoRequest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../eventos-service/src/main/java/com/um/eventos/infrastructure/adapters/input/rest/dto/response/EventoCreadoResponse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../eventos-service/src/main/java/com/um/eventos/infrastructure/adapters/input/rest/dto/response/EventoResponse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../eventos-service/src/main/java/com/um/eventos/infrastructure/adapters/input/rest/dto/response/EventosPorEspacioResponse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../eventos-service/src/main/java/com/um/eventos/infrastructure/adapters/input/rest/dto/response/ResumenEventosResponse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../eventos-service/src/main/java/com/um/eventos/infrastructure/adapters/output/client/EspacioServiceRestAdapter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../eventos-service/src/main/java/com/um/eventos/infrastructure/adapters/output/client/dto/EspacioResponseDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../eventos-service/src/main/java/com/um/eventos/infrastructure/adapters/output/persistence/entities/EventoEntity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../eventos-service/src/main/java/com/um/eventos/infrastructure/adapters/output/persistence/entities/OcupacionEntity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../eventos-service/src/main/java/com/um/eventos/infrastructure/adapters/output/persistence/mapper/EventoPersistenceMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../eventos-service/src/main/java/com/um/eventos/infrastructure/adapters/output/persistence/repositories/EventoRepositoryImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../eventos-service/src/main/java/com/um/eventos/infrastructure/config/AppBinder.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../eventos-service/src/main/java/com/um/eventos/infrastructure/config/SwaggerConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../eventos-service/src/main/java/com/um/usuarios/domain/model/Roles.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../eventos-service/src/main/java/com/um/usuarios/domain/model/Usuario.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../eventos-service/src/main/resources/META-INF/beans.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../eventos-service/src/main/resources/META-INF/persistence.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../reservas-service/pom.xml" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHomeTypeForPersistence" value="WRAPPER" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 1
+}]]></component>
+  <component name="ProjectId" id="2xbUFeCk7YHr1N5AfobDaLvcGzb" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "dart.analysis.tool.window.visible": "false",
+    "git-widget-placeholder": "dev-eventos",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/Users/thvx/Library/CloudStorage/GoogleDrive-dafna.pena@unmsm.edu.pe/Mi unidad/Universidad/UMU/Arquitectura de Software/arso_project/eventos-service-aaa",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-a94e463ab2e7-intellij.indexing.shared.core-IU-243.26053.27" />
+        <option value="bundled-js-predefined-d6986cc7102b-1632447f56bf-JavaScript-IU-243.26053.27" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c3129b50-03c2-4b84-815f-8378761b324b" name="Changes" comment="" />
+      <created>1748206164832</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1748206164832</updated>
+      <workItem from="1748206166123" duration="424000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

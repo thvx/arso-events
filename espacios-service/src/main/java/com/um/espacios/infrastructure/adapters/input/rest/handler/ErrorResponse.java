@@ -1,9 +1,8 @@
 package com.um.espacios.infrastructure.adapters.input.rest.handler;
 
-import lombok.*;
-
 import java.time.LocalDateTime;
 import java.util.List;
+import lombok.*;
 
 @Getter
 @Setter

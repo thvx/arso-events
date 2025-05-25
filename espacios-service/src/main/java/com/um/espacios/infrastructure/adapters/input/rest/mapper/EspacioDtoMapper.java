@@ -1,14 +1,16 @@
 package com.um.espacios.infrastructure.adapters.input.rest.mapper;
 
 import com.um.espacios.domain.model.EspacioFisico;
+import com.um.espacios.domain.model.EstadoEspacio;
 import com.um.espacios.domain.model.PuntoDeInteres;
 import com.um.espacios.domain.model.Ubicacion;
 import com.um.espacios.infrastructure.adapters.input.rest.dto.request.AsignarPuntosRequest;
 import com.um.espacios.infrastructure.adapters.input.rest.dto.request.CrearEspacioRequest;
-import com.um.espacios.infrastructure.adapters.input.rest.dto.response.*;
-import com.um.espacios.domain.model.EstadoEspacio;
-import org.mapstruct.*;
-
+import com.um.espacios.infrastructure.adapters.input.rest.dto.response.EspacioCreadoResponse;
+import com.um.espacios.infrastructure.adapters.input.rest.dto.response.EspacioResponse;
+import com.um.espacios.infrastructure.adapters.input.rest.dto.response.PuntoDeInteresResponse;
+import org.mapstruct.Mapper;
+import org.mapstruct.Mapping;
 import java.util.List;
 
 @Mapper(componentModel = "spring",

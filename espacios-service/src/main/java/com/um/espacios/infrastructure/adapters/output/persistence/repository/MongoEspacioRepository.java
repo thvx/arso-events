@@ -2,15 +2,15 @@ package com.um.espacios.infrastructure.adapters.output.persistence.repository;
 
 import com.um.espacios.application.ports.output.EspacioRepository;
 import com.um.espacios.domain.model.EspacioFisico;
-import com.um.espacios.domain.model.EstadoEspacio;
 import com.um.espacios.domain.model.PuntoDeInteres;
 import com.um.espacios.infrastructure.adapters.output.persistence.mapper.EspacioEntityMapper;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Repository;
 
-import java.time.LocalDateTime;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 @Repository
 @RequiredArgsConstructor
@@ -45,12 +45,12 @@ public class MongoEspacioRepository implements EspacioRepository {
         return springDataEspacioRepository.findAll()
                 .stream()
                 .map(EspacioEntityMapper::toModel)
-                .toList();
+                .collect(Collectors.toList());
     }
 
     @Override
     public List<PuntoDeInteres> buscarPuntosDeInteresCercanos(double latitud, double longitud) {
-        return List.of();
+        return Arrays.asList();
     }
 
     @Override

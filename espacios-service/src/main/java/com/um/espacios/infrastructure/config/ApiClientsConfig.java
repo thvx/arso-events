@@ -1,11 +1,10 @@
 package com.um.espacios.infrastructure.config;
 
-import com.um.espacios.application.ports.output.EventosServicePort;
+import com.um.espacios.application.ports.output.EventoServicePort;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.reactive.function.client.WebClient;
-import org.springframework.web.reactive.function.client.support.WebClientAdapter;
 import org.springframework.web.service.invoker.HttpServiceProxyFactory;
 
 @Configuration
@@ -19,10 +18,10 @@ public class ApiClientsConfig {
     }
 
     @Bean
-    public EventosServicePort eventosServicePort(WebClient webClient) {
+    public EventoServicePort eventosServicePort(WebClient webClient) {
         HttpServiceProxyFactory factory = HttpServiceProxyFactory
-                .builder(WebClientAdapter.forClient(webClient))
+                .builder()
                 .build();
-        return factory.createClient(EventosServicePort.class);
+        return factory.createClient(EventoServicePort.class);
     }
 }

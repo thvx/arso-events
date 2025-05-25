@@ -2,17 +2,19 @@ package com.um.espacios.infrastructure.adapters.input.rest.controller;
 
 import com.um.espacios.application.ports.input.*;
 import com.um.espacios.domain.exceptions.EspacioConOcupacionesActivasException;
+import com.um.espacios.domain.exceptions.ServicioNoDisponibleException;
 import com.um.espacios.domain.model.EspacioFisico;
+import com.um.espacios.infrastructure.adapters.input.rest.dto.request.CrearEspacioRequest;
+import com.um.espacios.infrastructure.adapters.input.rest.dto.request.ModificarEspacioRequest;
 import com.um.espacios.infrastructure.adapters.input.rest.dto.response.EspacioCreadoResponse;
-import com.um.espacios.infrastructure.adapters.input.rest.dto.request.*;
 import com.um.espacios.infrastructure.adapters.input.rest.dto.response.EspacioResponse;
 import com.um.espacios.infrastructure.adapters.input.rest.mapper.EspacioDtoMapper;
-
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import java.net.URI;
@@ -80,7 +82,7 @@ public class EspacioFisicoController {
             return ResponseEntity.ok().build();
         } catch (EspacioConOcupacionesActivasException e) {
             return ResponseEntity.badRequest().build();
-        } catch (Exception e) {
+        } catch (Exception | ServicioNoDisponibleException e) {
             throw new RuntimeException(e);
         }
     }
@@ -103,7 +105,7 @@ public class EspacioFisicoController {
             return ResponseEntity.noContent().build();
         } catch (EspacioConOcupacionesActivasException e) {
             return ResponseEntity.badRequest().build();
-        } catch (Exception e) {
+        } catch (Exception | ServicioNoDisponibleException e) {
             throw new RuntimeException(e);
         }
     }

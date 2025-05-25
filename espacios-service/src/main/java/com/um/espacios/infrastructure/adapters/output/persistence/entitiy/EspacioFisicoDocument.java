@@ -1,11 +1,11 @@
 package com.um.espacios.infrastructure.adapters.output.persistence.entitiy;
 
 import com.um.espacios.domain.model.EstadoEspacio;
-import lombok.*;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.util.List;
+import lombok.*;
 
 @Document(collection = "espacios")
 @Getter

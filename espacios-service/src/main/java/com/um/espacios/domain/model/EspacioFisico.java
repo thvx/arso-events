@@ -1,7 +1,9 @@
 package com.um.espacios.domain.model;
 
-import com.um.espacios.domain.exceptions.EspacioConOcupacionesActivasException;
-import lombok.*;
+import lombok.Builder;
+import lombok.EqualsAndHashCode;
+import lombok.Getter;
+import lombok.ToString;
 
 import java.util.List;
 

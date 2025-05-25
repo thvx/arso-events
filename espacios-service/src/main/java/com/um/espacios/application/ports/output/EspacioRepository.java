@@ -3,7 +3,6 @@ package com.um.espacios.application.ports.output;
 import com.um.espacios.domain.model.EspacioFisico;
 import com.um.espacios.domain.model.PuntoDeInteres;
 
-import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Optional;
 

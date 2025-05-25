@@ -1,8 +1,9 @@
 package com.um.espacios.infrastructure.adapters.input.rest.dto.request;
 
-import jakarta.validation.constraints.*;
-import lombok.*;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.Positive;
 import org.springframework.stereotype.Component;
+import lombok.*;
 
 @Getter
 @Setter

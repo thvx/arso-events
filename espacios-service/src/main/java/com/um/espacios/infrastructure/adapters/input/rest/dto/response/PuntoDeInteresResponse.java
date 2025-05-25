@@ -1,7 +1,7 @@
 package com.um.espacios.infrastructure.adapters.input.rest.dto.response;
 
-import lombok.*;
 import org.springframework.stereotype.Component;
+import lombok.*;
 
 @Getter
 @Setter
